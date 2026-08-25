@@ -47,7 +47,6 @@ a {
 }
 
 .hero {
-  max-width: 870px;
   padding: 108px 0 78px;
 }
 
@@ -80,7 +79,6 @@ h1 {
 }
 
 .question {
-  max-width: 760px;
   margin-bottom: 30px;
   font-size: clamp(1.6rem, 4vw, 2.45rem);
   font-weight: 500;
@@ -88,15 +86,20 @@ h1 {
   letter-spacing: -0.035em;
 }
 
+.motivation,
+.summary,
+.section-intro > p:last-child,
+.paper-hook {
+  max-width: 54rem;
+}
+
 .motivation {
-  max-width: 690px;
   margin-bottom: 14px;
   color: var(--ink);
   font-size: 1.1rem;
 }
 
 .summary {
-  max-width: 730px;
   margin-bottom: 30px;
   color: var(--muted);
   font-size: 1.1rem;
@@ -143,24 +146,18 @@ code, pre { font-family: "IBM Plex Mono", ui-monospace, monospace; }
 }
 
 .section-intro {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  column-gap: 54px;
   margin-bottom: 38px;
 }
 
-.section-intro .eyebrow { grid-column: 1 / -1; }
-
 h2 {
-  margin-bottom: 0;
+  margin-bottom: 16px;
   font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.05;
   letter-spacing: -0.055em;
 }
 
 .section-intro > p:last-child {
-  align-self: end;
-  margin-bottom: 2px;
+  margin-bottom: 0;
   color: var(--muted);
 }
 
@@ -237,7 +234,6 @@ h2 {
 }
 
 .paper-hook {
-  max-width: 660px;
   margin: 24px 0 0;
   font-size: 1.02rem;
   font-weight: 500;
@@ -358,11 +354,7 @@ footer p { margin-bottom: 0; }
 
 @media (max-width: 760px) {
   .hero { padding: 72px 0 56px; }
-  .section-intro { grid-template-columns: 1fr; }
   .evidence, .example { padding: 64px 0; }
-  .section-intro { gap: 18px; }
-  .section-intro .eyebrow { grid-column: auto; }
-  .section-intro > p:last-child { margin-bottom: 0; }
   .speed-chart { padding: 22px 18px; }
   .bar-label { font-size: 0.76rem; }
   .bar-label small { display: block; margin-left: 0; }
