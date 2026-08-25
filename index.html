@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="KernelDF is a home for research and open-source systems that generate, validate, and optimize GPU kernels for data processing."
+    />
+    <meta property="og:title" content="KernelDF" />
+    <meta
+      property="og:description"
+      content="Research and open-source systems for GPU-accelerated data processing."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kerneldf.github.io/" />
+    <meta property="og:image" content="https://kerneldf.github.io/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KernelDF" />
+    <meta
+      name="twitter:description"
+      content="Research and open-source systems for GPU-accelerated data processing."
+    />
+    <meta name="twitter:image" content="https://kerneldf.github.io/og.png" />
+    <title>KernelDF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="./">KernelDF</a>
+      <a class="header-link" href="https://github.com/kerneldf">GitHub</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">GPU-native data systems</p>
+        <h1 id="page-title">Data processing,<br />down to the kernel.</h1>
+        <p class="summary">
+          KernelDF is a home for research and open-source systems that use AI
+          to generate, validate, and optimize GPU kernels for real data
+          workloads.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#projects">Explore projects</a>
+          <a class="button secondary" href="https://github.com/kerneldf">View on GitHub</a>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">Research in the open.</h2>
+        </div>
+
+        <article class="project-card">
+          <div class="project-number" aria-hidden="true">01</div>
+          <div class="project-content">
+            <p class="project-type">Benchmark · LLMs · GPU databases</p>
+            <h3>DataKernelBench</h3>
+            <p class="project-question">Can LLMs optimize database queries on GPUs?</p>
+            <p class="project-description">
+              A benchmark for translating SQL-derived PyTorch programs into
+              optimized CUDA and Triton kernels, evaluated for correctness and
+              execution speed.
+            </p>
+            <div class="project-links">
+              <a href="./datakernelbench/">Project page <span aria-hidden="true">&#8594;</span></a>
+              <a href="https://github.com/kerneldf/DataKernelBench">Code <span aria-hidden="true">&#8599;</span></a>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>KernelDF</p>
+      <p>GPU kernels for data processing.</p>
+    </footer>
+  </body>
+</html>

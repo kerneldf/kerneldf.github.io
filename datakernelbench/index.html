@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="DataKernelBench evaluates LLMs that translate SQL queries into optimized CUDA and Triton kernels through a validated PyTorch intermediate representation."
+    />
+    <meta property="og:title" content="DataKernelBench" />
+    <meta property="og:description" content="Can LLMs optimize database queries on GPUs?" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kerneldf.github.io/datakernelbench/" />
+    <meta property="og:image" content="https://kerneldf.github.io/datakernelbench/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DataKernelBench" />
+    <meta name="twitter:description" content="Can LLMs optimize database queries on GPUs?" />
+    <meta name="twitter:image" content="https://kerneldf.github.io/datakernelbench/og.png" />
+    <title>DataKernelBench</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/styles/github-dark.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"
+      defer
+    ></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="https://kerneldf.github.io/">KernelDF</a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">LLMs × databases × GPU kernels</p>
+        <h1 id="page-title">DataKernelBench</h1>
+        <p class="question">Can LLMs optimize database queries on GPUs?</p>
+        <p class="motivation">
+          GPU-accelerated data processing is expanding as data volumes grow. At
+          the same time, coding LLMs can increasingly generate low-level GPU
+          programs.
+        </p>
+        <p class="summary">
+          DataKernelBench evaluates LLMs on a <strong>novel task</strong>:
+          translating SQL queries into optimized CUDA and Triton kernels via a
+          validated PyTorch intermediate representation, then measuring whether
+          they execute faster on GPUs.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="https://openreview.net/forum?id=zdhc3ohUgX">Paper</a>
+          <a class="button secondary" href="https://github.com/KernelDF/DataKernelBench">Code</a>
+        </div>
+        <p class="authors">
+          <a href="https://research.ibm.com/people/gokul-karthik-kumar">Gokul Karthik Kumar</a> ·
+          <a href="https://research.ibm.com/people/yotam-perlitz--1">Yotam Perlitz</a> ·
+          <a href="https://research.ibm.com/people/corey-liam-lammie">Corey Lammie</a> ·
+          <a href="https://research.ibm.com/people/andrea-giovannini">Andrea Giovannini</a> ·
+          <a href="https://informatics.tuwien.ac.at/people/katja-hose">Katja Hose</a>
+        </p>
+        <p class="affiliations">IBM Research · TU Wien</p>
+      </section>
+
+      <section class="evidence" aria-labelledby="evidence-title">
+        <div class="section-intro">
+          <p class="eyebrow">Benchmark results</p>
+          <h2 id="evidence-title">How well do current models perform?</h2>
+          <p>
+            We evaluate ten proprietary and open-weight LLMs across CUDA and
+            Triton on all 22 TPC-H queries at SF10 using one NVIDIA H100, at
+            core and full-query optimization. The strongest configuration
+            achieves 2.11× overall speedup with a 100% pass rate.
+          </p>
+        </div>
+
+        <figure class="speed-chart">
+          <div class="chart-group">Proprietary models</div>
+          <div class="bar-row">
+            <div class="bar-label"><span>GPT-5.5 · CUDA-full</span><strong>2.11× <small>pass rate 100%</small></strong></div>
+            <div class="bar-track"><span style="width: 95.9%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label"><span>Claude Sonnet 4.6 · Triton-full</span><strong>1.54× <small>pass rate 100%</small></strong></div>
+            <div class="bar-track"><span style="width: 70%"></span></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-label"><span>Claude Opus 4.7 · CUDA-full</span><strong>1.51× <small>pass rate 100%</small></strong></div>
+            <div class="bar-track"><span style="width: 68.6%"></span></div>
+          </div>
+
+          <div class="chart-group open-group">Open-weight models</div>
+          <div class="bar-row open-row">
+            <div class="bar-label"><span>Qwen3.5-397B-A17B · Triton-full</span><strong>1.26× <small>pass rate 100%</small></strong></div>
+            <div class="bar-track"><span style="width: 57.3%"></span></div>
+          </div>
+          <div class="bar-row open-row">
+            <div class="bar-label"><span>GPT-OSS-120B · CUDA-full</span><strong>1.26× <small>pass rate 86.4%</small></strong></div>
+            <div class="bar-track"><span style="width: 57.3%"></span></div>
+          </div>
+          <div class="bar-row open-row">
+            <div class="bar-label"><span>DeepSeek-V4-Flash · Triton-core</span><strong>1.23× <small>pass rate 90.9%</small></strong></div>
+            <div class="bar-track"><span style="width: 55.9%"></span></div>
+          </div>
+          <figcaption>
+            TPC-H SF10 on one NVIDIA H100. Best configuration per model. Values
+            show overall speedup over compiled TorchPlan and pass rate across
+            the 22 queries. Invalid or insufficiently faster kernels fall back
+            to compiled TorchPlan.
+          </figcaption>
+        </figure>
+
+        <p class="scale-note">
+          <strong>Beyond GPU memory.</strong> On TPC-H SF100, Dask-cuDF loads
+          partitions on demand across four H100 GPUs. All 22 optimized
+          implementations pass, and the complete workload runs 2.54× faster
+          than the partitioned TorchPlan baseline.
+        </p>
+
+        <p class="paper-hook">
+          The paper examines where these gains come from—and why they vary so
+          much across models and queries.
+        </p>
+      </section>
+
+      <section class="example" aria-labelledby="example-title">
+        <div class="section-intro">
+          <p class="eyebrow">TPC-H Q6</p>
+          <h2 id="example-title">See one example.</h2>
+          <p>
+            Follow TPC-H Q6 from SQL to its validated TorchPlan and complete
+            LLM-generated Triton and CUDA implementations. Expand any file to
+            inspect the exact source.
+          </p>
+        </div>
+
+        <div class="artifacts">
+          <details class="artifact" data-source="./examples/q06.sql">
+            <summary>
+              <span class="artifact-step">01</span>
+              <span class="artifact-name">SQL query</span>
+              <span class="artifact-meta">SQL · 10 lines</span>
+            </summary>
+            <div class="artifact-body">
+              <div class="artifact-toolbar">
+                <span>q06.sql</span>
+                <a href="./examples/q06.sql" target="_blank">Open raw file ↗</a>
+              </div>
+              <pre><code class="language-sql">Open to load the complete source.</code></pre>
+            </div>
+          </details>
+
+          <details class="artifact" data-source="./examples/q06_torchplan.py">
+            <summary>
+              <span class="artifact-step">02</span>
+              <span class="artifact-name">TorchPlan</span>
+              <span class="artifact-meta">Python · 70 lines</span>
+            </summary>
+            <div class="artifact-body">
+              <div class="artifact-toolbar">
+                <span>q06_torchplan.py</span>
+                <a href="./examples/q06_torchplan.py" target="_blank">Open raw file ↗</a>
+              </div>
+              <pre><code class="language-python">Open to load the complete source.</code></pre>
+            </div>
+          </details>
+
+          <details class="artifact" data-source="./examples/q06_triton.py">
+            <summary>
+              <span class="artifact-step">03</span>
+              <span class="artifact-name">Triton kernel</span>
+              <span class="artifact-meta">Python · 202 lines</span>
+            </summary>
+            <div class="artifact-body">
+              <div class="artifact-toolbar">
+                <span>q06_triton.py</span>
+                <a href="./examples/q06_triton.py" target="_blank">Open raw file ↗</a>
+              </div>
+              <pre><code class="language-python">Open to load the complete source.</code></pre>
+            </div>
+          </details>
+
+          <details class="artifact" data-source="./examples/q06_cuda.py">
+            <summary>
+              <span class="artifact-step">04</span>
+              <span class="artifact-name">CUDA kernel</span>
+              <span class="artifact-meta">Python + CUDA · 301 lines</span>
+            </summary>
+            <div class="artifact-body">
+              <div class="artifact-toolbar">
+                <span>q06_cuda.py</span>
+                <a href="./examples/q06_cuda.py" target="_blank">Open raw file ↗</a>
+              </div>
+              <pre><code class="language-python">Open to load the complete source.</code></pre>
+            </div>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This work is part of the <a href="https://armada-dn.eu/">ARMADA project</a>
+        under the Marie Skłodowska-Curie Actions Doctoral Networks.
+      </p>
+    </footer>
+
+  </body>
+</html>
