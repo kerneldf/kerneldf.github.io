@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 320" role="img" aria-labelledby="title desc">
+  <title id="title">KernelDF</title>
+  <desc id="desc">KernelDF wordmark with a dataframe grid and computational core symbol.</desc>
+
+  <g id="mark" transform="translate(24 24)">
+    <g fill="#111713">
+      <rect x="0" y="0" width="72" height="72" rx="14" />
+      <rect x="88" y="0" width="72" height="72" rx="14" />
+      <path d="M176 0H248L176 72Z" />
+
+      <rect x="0" y="88" width="72" height="72" rx="14" />
+      <path d="M248 88V160L176 124Z" />
+
+      <rect x="0" y="176" width="72" height="72" rx="14" />
+      <rect x="88" y="176" width="72" height="72" rx="14" />
+      <path d="M176 176L248 248H176Z" />
+    </g>
+    <circle cx="124" cy="124" r="36" fill="#087f5b" />
+  </g>
+
+  <text
+    x="320"
+    y="222"
+    fill="#111713"
+    font-family="'IBM Plex Sans', 'IBM Plex Sans Text', sans-serif"
+    font-size="168"
+    font-weight="700"
+    letter-spacing="-6"
+  >KernelDF</text>
+</svg>

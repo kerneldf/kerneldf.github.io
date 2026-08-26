@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 296 296" role="img" aria-labelledby="title desc">
+  <title id="title">KernelDF mark</title>
+  <desc id="desc">A dataframe grid forming an abstract K around a green computational core.</desc>
+
+  <g transform="translate(24 24)">
+    <g fill="#111713">
+      <rect x="0" y="0" width="72" height="72" rx="14" />
+      <rect x="88" y="0" width="72" height="72" rx="14" />
+      <path d="M176 0H248L176 72Z" />
+
+      <rect x="0" y="88" width="72" height="72" rx="14" />
+      <path d="M248 88V160L176 124Z" />
+
+      <rect x="0" y="176" width="72" height="72" rx="14" />
+      <rect x="88" y="176" width="72" height="72" rx="14" />
+      <path d="M176 176L248 248H176Z" />
+    </g>
+    <circle cx="124" cy="124" r="36" fill="#087f5b" />
+  </g>
+</svg>

@@ -41,9 +41,18 @@ a {
 }
 
 .wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 700;
   letter-spacing: -0.02em;
   text-decoration: none;
+}
+
+.wordmark img {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 .hero {
