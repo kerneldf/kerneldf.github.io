@@ -46,6 +46,7 @@ a {
   gap: 10px;
   font-weight: 700;
   letter-spacing: -0.02em;
+  line-height: 1;
   text-decoration: none;
 }
 
