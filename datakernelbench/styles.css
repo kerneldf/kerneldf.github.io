@@ -286,6 +286,21 @@ h2 {
 
 .scale-note strong { color: var(--ink); }
 
+.example-try {
+  max-width: 54rem;
+  margin: -14px 0 32px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.example-try a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration-color: var(--accent);
+}
+
+.example-try a:hover { color: var(--accent); }
+
 .artifacts {
   border-top: 1px solid var(--ink);
 }
